@@ -1,12 +1,12 @@
 import {create} from 'zustand';
-const apiUrl="https://e-commerce-r4xa.onrender.com";
+const apiUrl="https://e-commerce-9-y0rq.onrender.com";
 const useProductStore = create((set) => ({
     products: [],
     setProducts:(products)=>set({products}),
     createNewProduct: async(newProduct)=>{
        if(!newProduct.name || !newProduct.price || !newProduct.description || !newProduct.image){
         return {
-            success:false, message:"Please fill all the fields"
+            success: false, message: "Please fill all the fields"
         }
        } 
        if (isNaN(Number(newProduct.price))) {
@@ -14,9 +14,9 @@ const useProductStore = create((set) => ({
     }
 
        const res= await fetch(apiUrl,{
-        method:"POST",
+        method: "POST",
         headers:{
-            "Content-Type":"application/json"
+            "Content-Type": "application/json"
         },
         body:JSON.stringify(newProduct)
     }) 
