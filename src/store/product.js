@@ -1,5 +1,5 @@
 import {create} from 'zustand';
-const apiUrl="https://e-commerce-9-y0rq.onrender.com";
+const apiUrl="https://e-commerce-9-y0rq.onrender.com/products";
 const useProductStore = create((set) => ({
     products: [],
     setProducts:(products)=>set({products}),
