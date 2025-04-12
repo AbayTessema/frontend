@@ -1,5 +1,5 @@
 import {create} from 'zustand';
-const apiUrl=process.env.REACT_APP_API_URL;
+const apiUrl="https://e-commerce-r4xa.onrender.com";
 const useProductStore = create((set) => ({
     products: [],
     setProducts:(products)=>set({products}),
